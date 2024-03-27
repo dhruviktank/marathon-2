@@ -21,7 +21,6 @@ body {
     background-color: white;
     width: max(min(500px, 100%), 360px);
     border-bottom: 10px solid rgb(234, 99, 65);
-    /* height: 10px; */
 }
 
 .header-container {
@@ -73,6 +72,7 @@ body {
 
 .bottom-container {
     position: relative;
+    padding-bottom: 30px;
 }
 
 .bottom-right-container {
@@ -88,11 +88,10 @@ body {
     box-sizing: border-box;
 }
 
-.about-container p,
-.contact-container p {
+.about-text {
     font-size: 10px;
     text-align: justify;
-    color: white;
+    color: rgb(235, 235, 235);
     margin: 5px 0;
 }
 
@@ -104,6 +103,7 @@ body {
 h2 {
     font-size: 16px;
     text-align: center;
+    color: rgb(35, 77, 91);
     margin: 15px;
 }
 
@@ -128,7 +128,7 @@ h2 {
 
 .service-container div:nth-child(2) p {
     font-size: 10px;
-    color: purple;
+    color: gray;
     text-align: justify;
 }
 
@@ -136,6 +136,7 @@ h2 {
     color: rgb(35, 77, 91);
     font-size: 12px;
     text-align: left;
+    font-weight: 600;
 }
 
 .mail-container {
@@ -146,43 +147,92 @@ h2 {
 
 .mail-container span {
     font-size: 12px;
+    color: rgb(115, 183, 209);
+}
+
+.logo-text {
+    font-size: 20px;
+}
+
+.about-title {
+    color: white;
+    text-align: center;
+    font-size: 12px;
 }
 
 @media screen and (max-width: 480px) {
     .header-right-container {
-        height: 150%;
-        background-color: rgb(35, 77, 91, 0.8);
-        position: absolute;
-        top: 0;
-        width: 40%;
-        right: 5%;
-        border-radius: 0 0 50% 50%;
-        backdrop-filter: contrast(2);
+        height: 180%;
     }
 
     .header-right-container p {
-        color: white;
         font-size: 20px;
-        margin: 15% 10px;
-        font-weight: 800;
-        text-align: center;
-        line-height: 45px;
+        line-height: 30px;
     }
+
     .layout-container {
-        background-color: white;
         width: 360px;
-        border-bottom: 10px solid rgb(234, 99, 65);
-        /* height: 10px; */
+        border-bottom: 5px solid rgb(234, 99, 65);
+        min-width: 360px;
+    }
+
+    .header-container {
+        height: 80px;
+    }
+
+    .bg-container {
+        height: 200px;
+    }
+
+    .logo-container {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 20px;
+        width: 20px;
+        border-top: 3.5px solid rgb(35, 77, 91);
+        border-left: 3.5px solid rgb(35, 77, 91);
+    }
+
+    .logo-text {
+        font-size: 15px;
+    }
+
+    .about-text {
+        font-size: 8px;
+        margin: 3px 0;
+    }
+    .about-title{
+        font-size: 10px;
+    }
+    .bottom-left-container {
+        width: 55%;
+        padding: 15px 15px 0;
     }
     
-    .header-container {
-        position: relative;
-        height: 110px;
+    h2 {
+        font-size: 14px;
     }
-    .bg-container {
-        height: 150px;
-        background: url('images/bg1.png');
-        background-position: center;
-        background-size: cover;
+
+    .service-container div:nth-child(1) {
+        font-size: 26px;
+    }
+    
+    .service-container div:nth-child(2) p {
+        font-size: 8px;
+    }
+    
+    .service-container div:nth-child(2) p:nth-child(1) {
+        font-size: 10px;
+    }
+
+    .mail-container {
+        padding: 10px;
+    }
+    
+    .mail-container span {
+        font-size: 10px;
     }
 }
